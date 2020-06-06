@@ -6,15 +6,15 @@
 Implement OOP pattern "Decorator"
 
 ### Description
-There is a program which reads array from one file and writes it to another file.
-There are some decorators which sort an array before it will be written to file.
+There is a program which reads an array from one file and writes it to another file.
+There are some decorators which sort the array before it will be written to file.
 
 ### Class schema
 ![](class_schema/decorator-and-sorting.png)
 
 
 ### Decorator
-If the program supports a sort type the program will delegate **writing** of the array to a decorator.
+If a program supports a sort type the program will delegate **writing** of the array to a decorator.
 ```python
 if sort_type == Sorting.bubble.value:
     BubbleSortDecorator(program).write(write_to)
