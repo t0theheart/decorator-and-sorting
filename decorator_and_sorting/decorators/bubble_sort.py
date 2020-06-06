@@ -14,7 +14,9 @@ class BubbleSortDecorator(ProgramABC, SortDecoratorABC):
                     swapped = True
 
     def write(self, write_to: str, sort_by: str = 'Sorted by "Bubble sort"'):
-        self.sort(self._program._array)
+        print('"Bubble sort" used')
+        self._array = self._program._array
+        self.sort(self._array)
         self._program.write(write_to, sort_by)
 
     def read(self, read_from: str):

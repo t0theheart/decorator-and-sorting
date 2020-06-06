@@ -18,6 +18,7 @@ def main():
         Enter type sort: bubble
         Enter read from: array.txt
         Enter write to: result.txt
+        "Bubble sort" used
         Sorting program end.
     """
 
