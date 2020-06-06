@@ -38,7 +38,7 @@ BubbleSortDecorator(SelectionSortDecorator(InsertionSortDecorator(program))).wri
 
 To run program:
 ```bash
-$ python program_1.py
+$ python start.py
 ```
 
 To run tests:
