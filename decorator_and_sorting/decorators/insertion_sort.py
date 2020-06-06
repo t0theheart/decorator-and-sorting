@@ -1,10 +1,9 @@
-from decorator_and_sorting.decorators.abc import SortDecoratorABC
 from decorator_and_sorting.program.abc import ProgramABC
 
 
-class InsertionSortDecorator(ProgramABC, SortDecoratorABC):
+class InsertionSortDecorator(ProgramABC):
     def __init__(self, program: ProgramABC):
-        super().__init__(program)
+        self._program: ProgramABC = program
         self._array: list = []
 
     @staticmethod
@@ -24,4 +23,4 @@ class InsertionSortDecorator(ProgramABC, SortDecoratorABC):
         self._program.write(write_to, sort_by)
 
     def read(self, read_from: str):
-        super().read(read_from)
+        raise NotImplementedError('InsertionSortDecorator objects has no "read" implementation')

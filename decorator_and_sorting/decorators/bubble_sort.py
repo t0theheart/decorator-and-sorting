@@ -1,8 +1,11 @@
-from decorator_and_sorting.decorators.abc import SortDecoratorABC
 from decorator_and_sorting.program.abc import ProgramABC
 
 
-class BubbleSortDecorator(ProgramABC, SortDecoratorABC):
+class BubbleSortDecorator(ProgramABC):
+    def __init__(self, program: ProgramABC):
+        self._program: ProgramABC = program
+        self._array: list = []
+
     @staticmethod
     def sort(array: list):
         swapped = True
@@ -20,4 +23,4 @@ class BubbleSortDecorator(ProgramABC, SortDecoratorABC):
         self._program.write(write_to, sort_by)
 
     def read(self, read_from: str):
-        super().read(read_from)
+        raise NotImplementedError('BubbleSortDecorator objects has no "read" implementation')
