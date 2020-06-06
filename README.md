@@ -2,7 +2,7 @@
 
 ## [OTUS](https://otus.ru) homework
 
-### Goals
+### Goal
 Implement OOP pattern "Decorator"
 
 ### Description
